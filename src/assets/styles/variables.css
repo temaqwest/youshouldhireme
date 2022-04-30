@@ -1,3 +1,8 @@
 :root {
-    --header-h: 60px;
+    --dark: #2F2F2F;
+    --light-grey: #FBFBFB;
+    --light: #EFEFEF;
+    --light-pink: #DFCCD8;
+    --pink: #D72483;
+    --gradient: linear-gradient(110.41deg, #2F2D2E 6.48%, #41292C 35.68%, #792359 68.78%, #D72483 95.87%);
 }

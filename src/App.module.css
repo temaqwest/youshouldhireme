@@ -1,10 +1,32 @@
-import styles from ''
-
-function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 160px;
 }
 
-export default App;
+.textBlock {
+    max-width: 660px;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 37px;
+    line-height: 43px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.special {
+    color: #E79BCA;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-weight: 100;
+    font-size: 37px;
+    line-height: 43px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}

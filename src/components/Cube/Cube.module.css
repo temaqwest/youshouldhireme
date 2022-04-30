@@ -1,12 +1,52 @@
-import React from 'react';
+.cube {
+	width: 100%;
+	height: 100%;
+	backface-visibility: visible;
+	perspective-origin: 100% 100%;
+	transform-style: preserve-3d;
+	animation: rotateCube infinite 20s linear;
+}
 
+.side {
+	display: block;
+	position: absolute;
+	border: 2px solid var(--light-pink);
+	color: var(--light-pink);
+	transition: .24s ease-in-out;
+}
 
-const Cube = () => {
-	return (
-		<div className={}>
-		
-		</div>
-	);
-};
+.front {
+	transform: translateZ(50px);
+}
 
-export default Cube;
+.back {
+	transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+	transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+	transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+	transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+	transform: rotateX(-90deg) translateZ(50px);
+}
+
+@media (pointer: fine) and (hover: hover) {
+	.side:hover {
+		background-color: rgba(255, 255, 255, .2) !important;
+	}
+}
+
+@keyframes rotateCube {
+	to {
+		transform: rotate3d(-2, -1, 1, 720deg);
+	}
+}

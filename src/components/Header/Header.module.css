@@ -1,0 +1,74 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px 0;
+}
+
+.logo {
+    user-select: none;
+    pointer-events: none;
+}
+
+.list {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.listItem {
+    position: relative;
+    overflow: hidden;
+    transition: .24s ease-in-out;
+}
+
+.listItem .listItemLink.special {
+    border-radius: 20px;
+}
+
+.listItem .listItemLink.special::after {
+    content: none;
+}
+
+.listItemLink {
+    padding: 8px 15px;
+    border-radius: inherit;
+    color: var(--light);
+    display: block;
+    transition: inherit;
+}
+
+.listItemLink::after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    right: 15%;
+    left: 15%;
+    bottom: 0;
+    transform: translateX(-130%);
+    transition: transform .24s cubic-bezier(.56,.18,.14,1.19);
+    background-color: var(--light);
+}
+
+.listItemLink.special {
+    background-color: var(--dark);
+}
+
+@media (pointer: fine) and (hover: hover) {
+    .listItem:hover .listItemLink {
+        color: var(--light-pink);
+    }
+
+    .listItem:hover .listItemLink::after {
+        transform: translateX(0);
+    }
+
+    .listItem:hover .listItemLink.special {
+        background-color: var(--light-pink);
+        color: var(--dark);
+    }
+}

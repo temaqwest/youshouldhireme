@@ -1,0 +1,15 @@
+.wrapper {
+    min-height: 100vh;
+}
+
+
+.container {
+    max-width: 1712px;
+    padding-left: 72px;
+    padding-right: 72px;
+    flex-shrink: 0;
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+}
