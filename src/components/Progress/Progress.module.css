@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    justify-content: space-between;
+}
+
+.text {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 122.5%;
+    letter-spacing: 0.01em;
+}
+
+.progress {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 300px;
+    height: 12px;
+    background-color: var(--light-blue);
+}
+
+.progressBar {
+    border-radius: inherit;
+    height: inherit;
+}

@@ -1,0 +1,28 @@
+.socialsWrapper {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(29px);
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.socials {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+.socialButton {
+    color: #FFFFFF;
+}
+
+@media (pointer: fine) and (hover: hover) {
+    .socialButton:hover {
+        transform: translateX(-5px);
+    }
+}
