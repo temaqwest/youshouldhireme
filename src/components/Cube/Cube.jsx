@@ -1,7 +1,21 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Styles from './Cube.module.css';
 
 const Cube = ({perspective, cubeBackgroundRGB, width, height, size, modifier}) => {
+	
+	const cubeRef = useRef();
+	
+	function rotateCube(e) {
+		if (e.type === 'mouseout') {
+			cubeRef.current.style.cursor = 'initial';
+			return cubeRef.current.style.animation = `${Styles.rotateCube} infinite 20s linear`;
+		}
+		
+		cubeRef.current.style.transform = `rotateY(${e.clientX / .6}deg) rotateX(${e.clientY / 1.4}deg)`;
+		cubeRef.current.style.animation = 'none';
+		cubeRef.current.style.cursor = 'move';
+	}
+	
 	const sides = [
 		{id: 1, text: '', styleClass: Styles.front},
 		{id: 2, text: '', styleClass: Styles.back},
@@ -25,6 +39,9 @@ const Cube = ({perspective, cubeBackgroundRGB, width, height, size, modifier}) =
 	
 	return (
 		<div
+			onMouseMove={rotateCube}
+			onMouseOut={rotateCube}
+			ref={cubeRef}
 			className={[Styles.cube, modifier].join(' ')}
 			style={cubeStyle}
 		>

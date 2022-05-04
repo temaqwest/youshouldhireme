@@ -12,6 +12,7 @@
 	position: absolute;
 	border: 2px solid var(--light-pink);
 	color: var(--light-pink);
+	/*animation: changeColor infinite 3s linear alternate;*/
 	transition: .24s ease-in-out;
 }
 
@@ -46,7 +47,19 @@
 }
 
 @keyframes rotateCube {
+	from {
+		transform: rotate3d(0, 0, 0, 0);
+	}
 	to {
 		transform: rotate3d(-2, -1, 1, 720deg);
+	}
+}
+
+@keyframes changeColor {
+	from {
+		background-color: rgba(255, 255, 255, 0.31);
+	}
+	to {
+		background-color: rgba(0, 0, 0, 0.31);
 	}
 }
