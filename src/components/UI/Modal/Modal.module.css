@@ -1,0 +1,40 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0,0,0, .4);
+    backdrop-filter: blur(35px);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .24s ease-in-out;
+}
+
+.modalOverlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modalContent {
+    padding: 25px;
+    background-color: var(--light-dark);
+    min-width: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    column-gap: 20px;
+    border-radius: 4px;
+    color: var(--text);
+    position: relative;
+}
+
+.modalButtonClose {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
