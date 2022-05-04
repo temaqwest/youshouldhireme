@@ -1,0 +1,26 @@
+.icon {
+    flex: none;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+}
+
+.icon__small {
+    width: 16px;
+    height: 16px;
+}
+
+.icon__medium {
+    width: 22px;
+    height: 22px;
+}
+
+.icon__large {
+    width: 28px;
+    height: 28px;
+}
+
+.icon__xlarge {
+    width: 33px;
+    height: 33px;
+}
