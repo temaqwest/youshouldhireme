@@ -2,7 +2,11 @@ import React, {useRef} from 'react';
 import Styles from './Container.module.css';
 import useOnScreen from "../../hooks/useOnScreen";
 
-const Container = ({children, type}) => {
+const Container = ({children, type, modifier, autoHeight}) => {
+    const classes = [Styles.wrapper];
+    
+    if (modifier) classes.push(modifier);
+    
     const backgrounds = {
         lightPink: '#DFCCD8',
         pink: '#D72483',
@@ -18,8 +22,11 @@ const Container = ({children, type}) => {
         <div
             ref={ref}
             data-background={type}
-            className={Styles.wrapper}
-            style={{background: backgrounds[type]}}
+            className={classes.join(' ')}
+            style={{
+                background: backgrounds[type],
+                minHeight: !autoHeight ? '100vh' : 'initial'
+            }}
         >
             <div className={Styles.container}>
                 {children}

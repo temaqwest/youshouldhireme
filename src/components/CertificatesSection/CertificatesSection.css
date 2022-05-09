@@ -1,0 +1,77 @@
+.containerCertificates {
+    padding-top: 49px;
+    padding-bottom: 49px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    color: var(--dark);
+}
+
+.slideItem {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 25px;
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+.slideItem:hover .slideText {
+    opacity: 1;
+}
+
+.slideImage {
+    width: 260px;
+    height: 360px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: var(--light-grey);
+    transition: .25s ease-in-out;
+    position: relative;
+}
+
+.slideText {
+    padding: 0 10px 20px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, .9) 40%, transparent 125%);
+    backdrop-filter: blur(2px);
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--light);
+    border-radius: inherit;
+    transition: opacity .24s ease-in-out;
+    opacity: 0;
+}
+
+.slideTitle {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.slideDescription {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.sliderSwiper {
+    max-width: 1080px;
+    margin-top: 20px;
+}
+
+.sliderSwiper .swiper-wrapper {
+    align-items: center;
+    min-height: 560px;
+}
