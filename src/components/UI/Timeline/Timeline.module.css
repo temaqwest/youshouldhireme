@@ -52,7 +52,7 @@
     max-width: 320px;
     width: 100%;
     border-radius: 63px 63px 0 63px;
-    background-color: #E79BCA;
+    background-color: var(--m-light-pink);
     color: var(--violet);
     display: flex;
     justify-content: center;
@@ -62,7 +62,7 @@
 
 .reverse .dateBlock {
     background-color: var(--violet);
-    color: #E79BCA;
+    color: var(--m-light-pink);
     border-radius: 63px 63px 63px 0;
 }
 

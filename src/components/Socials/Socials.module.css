@@ -7,6 +7,7 @@
     border-radius: 20px;
     backdrop-filter: blur(29px);
     background-color: rgba(0, 0, 0, .2);
+    z-index: 10;
 }
 
 .socials {

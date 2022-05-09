@@ -1,9 +1,9 @@
 .content {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     column-gap: 20%;
-    margin-top: 230px;
+    padding: 230px 0 230px 0;
 }
 
 .textBlock {
@@ -20,7 +20,7 @@
 }
 
 .special {
-    color: #E79BCA;
+    color: var(--m-light-pink);
     font-weight: 700;
 }
 

@@ -1,0 +1,19 @@
+.content {
+    padding: 76px 0;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 100%;
+    margin-bottom: 55px;
+    text-align: left;
+    color: var(--light);
+}
+
+.list {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    row-gap: 38px;
+}
